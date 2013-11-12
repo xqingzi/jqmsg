@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-message.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/jquery_message.css">
+
+    <script>
+
+        function info() {
+            $.show_message(
+                    {title: 'I am the title.', content: 'A quick brown fox jump over the lazy dog.</br>End of the content.'},
+                    {auto_dismiss: false});
+        }
+
+        function success() {
+            $.show_message(
+                    {title: 'I am the title.', content: 'A quick brown fox jump over the lazy dog.</br>End of the content.'},
+                    {type: 'success'});
+        }
+
+        function warning() {
+            $.show_message(
+                    {title: 'I am the title.', content: 'A quick brown fox jump over the lazy dog.</br>End of the content.'},
+                    {type: 'warning'},
+                    function () {
+                        console.log('warning dismissed!');
+                    });
+        }
+
+        function error() {
+            $.show_message(
+                    {title: 'I am the title.', content: 'A quick brown fox jump over the lazy dog.</br>End of the content.'},
+                    {type: 'error'},
+                    function () {
+                        console.log('error dismissed!');
+                    });
+        }
+
+    </script>
+
+</head>
+<body>
+<button onclick="info()">info</button>
+<button onclick="success()">success</button>
+<button onclick="warning()">warning</button>
+<button onclick="error()">error</button>
+
+</body>
+</html>
